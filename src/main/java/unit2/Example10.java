@@ -11,7 +11,7 @@ public class Example10 {
         int number = scanner.nextInt();
         int sum = 0;
 
-        for (int k = 5; k <= number * 5; k = k + 5){
+        for (int k = 5; k <= number * 5; k += 5){
             sum += k;
         }
 

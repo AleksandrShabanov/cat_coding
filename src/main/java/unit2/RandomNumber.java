@@ -12,10 +12,12 @@ public class RandomNumber {
 
         int n = ThreadLocalRandom.current().nextInt();
 
-        if (n % 2 == 0)
+        if (n % 2 == 0) {
             System.out.println("Число четное: " + n);
-        else
+        }
+        else {
             System.out.println("Число нечетное: " + n);
+        }
 
     }
 }
