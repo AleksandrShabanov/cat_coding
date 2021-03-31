@@ -1,7 +1,4 @@
-package unit2;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package task2;
 
 public class LoopExamples {
 
