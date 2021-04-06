@@ -24,10 +24,8 @@ public class task3Examples {
          * 3) Посчитаем сумму нескольких чётных чисел 8+10+12+14.
          */
         int sumOfEven = 0;
-        for (int i = 1; i <= 14; i++) {
-            if (i >= 8 && i % 2 == 0) {
+        for (int i = 8; i <= 14; i+=2) {
                 sumOfEven += i;
-            }
         }
         System.out.println(sumOfEven);
 
