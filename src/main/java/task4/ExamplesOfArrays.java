@@ -31,7 +31,6 @@ public class ExamplesOfArrays {
          * 2. Переписать программу из предыдущего задания так, чтобы считалась сумма введенных чисел
          */
 
-        Scanner newScanner = new Scanner(System.in);
         int newArray[] = new int[5];
         int sum = 0;
 
@@ -54,12 +53,12 @@ public class ExamplesOfArrays {
         int newArray2[] = {10, 5, 3, 4, 5};
         int result = 0;
 
-        for (int i = 0; i < newArray2.length - 1; i++) {
-            int a = (newArray2[i] + newArray2[i + 1]);
+        for (int i = 0; i < newArray2.length; i++) {
 
-            if (a % 5 == 0) {
-                result = a;
+            if (newArray2[i] % 5 == 0) {
+                result += newArray2[i];
             }
+
         }
         System.out.println("Сумма элементов кратных 5: " + result);
 
@@ -71,17 +70,13 @@ public class ExamplesOfArrays {
          * !!! Аналогичный прошлому вопрос !!!
          */
 
-        Scanner newScanner2 = new Scanner(System.in);
-        int m = newScanner2.nextInt();
+        int m = scanner.nextInt();
+        int newArray3[] = {5, 1, 1, 3, 2};
+        int multiplication = 1;
 
-        int newArray3[] = {5, 5, 1, 3, 2};
-        int multiplication = 0;
-
-        for (int i = 0; i < newArray3.length - 1; i++) {
-            int a = newArray3[i] * newArray3[i + 1];
-
-            if (a > m) {
-                multiplication = a;
+        for (int i = 0; i < newArray3.length; i++) {
+            if (newArray3[i] > m){
+                multiplication *= newArray3[i];
             }
         }
 
@@ -95,7 +90,14 @@ public class ExamplesOfArrays {
          * 5. треугольник паскаля
          */
 
-        
+//        long triangle [][] = new long[10][];
+//
+//        for (int i = 0; i < triangle.length; i++){
+//            long[] innerMas = triangle[i];
+//            for (int j = 0; j < triangle[i].length; j++){
+//
+//            }
+//        }
 
 
     }
