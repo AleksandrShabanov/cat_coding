@@ -73,32 +73,20 @@ public class ExamplesOfArrays {
         int m = scanner.nextInt();
         int newArray3[] = {5, 1, 1, 3, 2};
         int multiplication = 1;
+        boolean isAvailableNumberGreaterM = false;
 
         for (int i = 0; i < newArray3.length; i++) {
             if (newArray3[i] > m){
                 multiplication *= newArray3[i];
+                isAvailableNumberGreaterM = true;
             }
         }
 
-        if (multiplication > 0) {
+        if (isAvailableNumberGreaterM) {
             System.out.println("Произведение чисел, которые больше " + m + ": " + multiplication);
         } else {
             System.out.println("Таких чисел нет");
         }
-
-        /**
-         * 5. треугольник паскаля
-         */
-
-//        long triangle [][] = new long[10][];
-//
-//        for (int i = 0; i < triangle.length; i++){
-//            long[] innerMas = triangle[i];
-//            for (int j = 0; j < triangle[i].length; j++){
-//
-//            }
-//        }
-
 
     }
 }
