@@ -75,7 +75,7 @@ public class ExamplesOfMatrix {
                 matrix[i][j] = random.nextInt(20) + 1;
 
                 if (i % 2 != 0) {
-                    if (matrix[i][j] % 2 != 0) {
+                    if (j % 2 != 0) {
                         sum += matrix[i][j];
                     }
                 }
@@ -93,26 +93,20 @@ public class ExamplesOfMatrix {
 
         Scanner scanner = new Scanner(System.in);
         int newMatrix[][] = new int[3][3];
-        int sum1 = 0;
-        int sum2 = 0;
-        int sum3 = 0;
+        int sumResult[] = new int[newMatrix.length];
 
         for (int i = 0; i < newMatrix.length; i++) {
+            int sum1 = 0;
             for (int j = 0; j < newMatrix[i].length; j++) {
                 newMatrix[i][j] = scanner.nextInt();
-                if (i == 0) {
-                    sum1 += newMatrix[i][j];
-                } else if (i == 1) {
-                    sum2 += newMatrix[i][j];
-                } else if (i == 2) {
-                    sum3 += newMatrix[i][j];
-                }
+                sum1 += newMatrix[i][j];
             }
+            sumResult[i] = sum1;
+
         }
         System.out.println(Arrays.deepToString(newMatrix));
-        System.out.println("Сумма элементов первого столбца: " + sum1);
-        System.out.println("Сумма элементов второго столбца: " + sum2);
-        System.out.println("Сумма элементов третьего столбца: " + sum3);
+        System.out.println("Сумма элементов всех столбцов: " + Arrays.toString(sumResult));
+
         System.out.println();
 
         /**
