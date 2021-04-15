@@ -68,12 +68,12 @@ public class Car {
     }
 
     public int refuel(int gasoline){
-        if (gasolineInCar < gasolineTankVolume){
-            if ((gasolineInCar += gasoline) > gasolineTankVolume){
+        gasolineInCar += gasoline;
+
+        if ((gasolineInCar += gasoline) > gasolineTankVolume){
                 return gasolineTankVolume;
             }
-            gasolineInCar += gasoline;
-        }
+
         return gasolineInCar;
     }
 }

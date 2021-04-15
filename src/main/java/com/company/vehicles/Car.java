@@ -8,8 +8,8 @@ public class Car {
     private String carClass;
     private double weight;
 
-    Driver driver = new Driver();
-    Engine turboEngine = new Engine();
+    private Driver driver;
+    private Engine turboEngine;
 
     public String getCarBrand() {
         return carBrand;
@@ -35,6 +35,22 @@ public class Car {
         this.weight = weight;
     }
 
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
+
+    public Engine getTurboEngine() {
+        return turboEngine;
+    }
+
+    public void setTurboEngine(Engine turboEngine) {
+        this.turboEngine = turboEngine;
+    }
+
     public void start(){
         System.out.println("Поехали");
     }
@@ -51,10 +67,13 @@ public class Car {
         System.out.println("Поворот направо");
     }
 
-    public void printInfo(Driver driver, Engine turboEngine){
+    public void printInfo(){
+        
         System.out.println("Водитель: " + driver.getName() + " " + driver.getSurname() + " со стажем вождения: " +
                 driver.getDrivingExperience() + " лет. " + " За рулем автомобиля: \n" + carBrand + " " + carClass + " класса " +
                 ", который весит: " + weight + ". Мощность двигателя: " + turboEngine.getPower() + " л/с. " + " Производитель двигателя: " +
                 turboEngine.getProducer());
     }
+
+
 }
