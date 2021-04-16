@@ -68,7 +68,7 @@ public class Car {
     }
 
     public void printInfo(){
-        
+
         System.out.println("Водитель: " + driver.getName() + " " + driver.getSurname() + " со стажем вождения: " +
                 driver.getDrivingExperience() + " лет. " + " За рулем автомобиля: \n" + carBrand + " " + carClass + " класса " +
                 ", который весит: " + weight + ". Мощность двигателя: " + turboEngine.getPower() + " л/с. " + " Производитель двигателя: " +
