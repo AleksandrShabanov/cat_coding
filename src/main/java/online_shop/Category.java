@@ -2,8 +2,6 @@ package online_shop;
 
 public class Category {
     private String categoryName;
-    private Product[] products;
-
 
     public String getCategoryName() {
         return categoryName;
@@ -13,12 +11,8 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public Product[] getProducts() {
-        return products;
+    @Override
+    public String toString() {
+        return categoryName;
     }
-
-    public void setProducts(Product[] products) {
-        this.products = products;
-    }
-
 }

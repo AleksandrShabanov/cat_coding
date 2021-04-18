@@ -4,7 +4,7 @@ public class Product {
     private String productName;
     private double price;
     private String rating;
-
+    private Category category;
 
     public String getProductName() {
         return productName;
@@ -30,10 +30,19 @@ public class Product {
         this.rating = rating;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "Название: " + productName + '\'' +
                 ", цена: " + price +
-                ", рэйтинг: " + rating + '\'';
+                ", рэйтинг: " + rating + '\'' +
+                ", категория: " + category;
     }
 }

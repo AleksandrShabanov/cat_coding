@@ -9,27 +9,8 @@ import java.util.Arrays;
  * г) Создать класс User, содержащий логин, пароль и объект класса Basket. Создать объект класса User. (Интернет магазин)
  */
 public class OnlineShop {
-    private Product product;
-    private Category category;
     private Basket basket;
     private User user;
-
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 
     public Basket getBasket() {
         return basket;
@@ -48,7 +29,7 @@ public class OnlineShop {
     }
 
     public void printInfo() {
-        System.out.println("Пользователь " + user.getLogin() + " " + " заказал: " + user.getBasket() +
-                " " + " из категории " + category.getCategoryName());
+        System.out.println("Пользователь " + user.getLogin() + " " + " заказал: " + user.getBasket());
     }
+
 }
