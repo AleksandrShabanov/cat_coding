@@ -54,9 +54,6 @@ public class Date {
         this.year = year;
     }
 
-    public Date(Date date) {
-
-    }
 
     public int getDay() {
         return day;
@@ -88,8 +85,6 @@ public class Date {
         setYear(year);
     }
 
-    public void set(Date date){
-    }
 
     public String getDayOfWeek() {
         Calendar cal = Calendar.getInstance();
