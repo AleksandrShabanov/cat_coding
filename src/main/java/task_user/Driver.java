@@ -8,7 +8,6 @@ package task_user;
  */
 public class Driver extends Worker{
     private int drivingExperience;
-    private String drivingCategory;
 
     public int getDrivingExperience() {
         return drivingExperience;
@@ -18,11 +17,4 @@ public class Driver extends Worker{
         this.drivingExperience = drivingExperience;
     }
 
-    public String getDrivingCategory() {
-        return drivingCategory;
-    }
-
-    public void setDrivingCategory(String drivingCategory) {
-        this.drivingCategory = drivingCategory;
-    }
 }
