@@ -44,7 +44,7 @@ public class TestUser {
         driver.setAge(54);
         driver.setSalary(3000);
         driver.setDrivingExperience(30);
-        
+
 
         System.out.println("Driver's name: " + driver.getName() + "; age: " + driver.getAge() + "; salary: " + driver.getSalary() +
                 "; driving experience: " + driver. getDrivingExperience() + "; category: " + DrivingCategory.C);
