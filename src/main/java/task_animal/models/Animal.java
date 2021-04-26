@@ -1,4 +1,4 @@
-package task_animal;
+package task_animal.models;
 
 public class Animal {
     private String food;

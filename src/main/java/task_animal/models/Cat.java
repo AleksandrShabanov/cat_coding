@@ -1,4 +1,4 @@
-package task_animal;
+package task_animal.models;
 
 public class Cat extends Animal{
     private boolean acuteEyesight;
@@ -22,6 +22,8 @@ public class Cat extends Animal{
 
     @Override
     public String toString() {
-        return "Кошка";
+        return "Кошка " +
+                "острое зрение: " + acuteEyesight +
+                ", осталось жизней: " + nineLives + ";";
     }
 }

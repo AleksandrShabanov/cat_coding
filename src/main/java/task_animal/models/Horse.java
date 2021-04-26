@@ -1,10 +1,10 @@
-package task_animal;
+package task_animal.models;
 
 public class Horse extends Animal{
     private int hooves;
     private String mane;
 
-    public Horse(String food, String location, int hooves, String mane) {
+    public Horse(String food, String location, String mane, int hooves) {
         super(food, location);
         this.hooves = hooves;
         this.mane = mane;
@@ -22,6 +22,8 @@ public class Horse extends Animal{
 
     @Override
     public String toString() {
-        return "Лошадь";
+        return "Лощадь " +
+                "Копыта: " + hooves +
+                ", грива: " + mane + ";";
     }
 }

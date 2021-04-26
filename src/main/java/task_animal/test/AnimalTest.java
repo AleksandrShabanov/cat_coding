@@ -1,4 +1,9 @@
-package task_animal;
+package task_animal.test;
+
+import task_animal.models.Cat;
+import task_animal.models.Dog;
+import task_animal.models.Horse;
+import task_animal.models.Vet;
 
 /**
  * 4 задачка
@@ -15,8 +20,8 @@ package task_animal;
  */
 public class AnimalTest {
     public static void main(String[] args) {
-        Horse horse = new Horse("сено", "прерии", 4, "Черная и длинная");
-        Dog dog = new Dog("косточки", "домашнее животное", true, "Длинный хвост");
+        Horse horse = new Horse("сено", "прерии",  "Черная и длинная", 4);
+        Dog dog = new Dog("косточки", "домашнее животное", "Длинный хвост", true);
         Cat cat = new Cat("сухой корм", "домашнее животное", true, 7);
 
         Vet vet = new Vet();

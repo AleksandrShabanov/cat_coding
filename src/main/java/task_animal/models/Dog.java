@@ -1,12 +1,12 @@
-package task_animal;
+package task_animal.models;
 
 public class Dog extends Animal{
-    private boolean friendOfHuman;
+    private boolean isFriendOfHuman;
     private String tailLength;
 
-    public Dog(String food, String location, boolean friendOfHuman, String tailLength) {
+    public Dog(String food, String location, String tailLength, boolean isFriendOfHuman) {
         super(food, location);
-        this.friendOfHuman = friendOfHuman;
+        this.isFriendOfHuman = isFriendOfHuman;
         this.tailLength = tailLength;
     }
 
@@ -22,6 +22,8 @@ public class Dog extends Animal{
 
     @Override
     public String toString() {
-        return "Собака";
+        return "Собака " +
+                "друг человека: " + isFriendOfHuman +
+                ", длина хвоста: " + tailLength + ";";
     }
 }
