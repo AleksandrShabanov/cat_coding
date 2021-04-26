@@ -50,9 +50,9 @@ public class Phone {
         System.out.println(name + " calls" + "; Number phone: " + number);
     }
 
-    public void sendMessage(long number, long ... vars) {
+    public void sendMessage(long number, long ... recipientNumbers) {
         System.out.println(number);
-        for (long phoneNumbers : vars) {
+        for (long phoneNumbers : recipientNumbers) {
             System.out.println(phoneNumbers);
         }
     }
