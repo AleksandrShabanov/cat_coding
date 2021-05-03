@@ -26,7 +26,7 @@ public class EmployeeTest {
         Employee employees[] = new Employee[9];
 
         for (int i = 0; i < employees.length; i++) {
-            
+
             if (i <= 2) {
                 employees[i] = new Manager();
             }
