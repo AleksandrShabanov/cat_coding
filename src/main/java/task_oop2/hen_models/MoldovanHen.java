@@ -3,19 +3,18 @@ package task_oop2.hen_models;
 import task_oop2.HenType;
 
 public class MoldovanHen extends Hen{
-    private int countOfEggs;
 
-    public MoldovanHen(int countOfEggs) {
-        this.countOfEggs = countOfEggs;
+    public MoldovanHen(HenType henType, int countOfEggs) {
+        super(henType, countOfEggs);
     }
 
     @Override
     public int getCountOfEggsPerMonth() {
-        return countOfEggs;
+        return super.getCountOfEggs();
     }
 
     public String getDescription() {
-        return super.getDescription() + " Моя страна - " + HenType.MOLDAVIA + ". Я несу " + getCountOfEggsPerMonth()
+        return super.getDescription() + " Моя страна - " + super.getHenType() + ". Я несу " + getCountOfEggsPerMonth()
                 + " яиц в месяц.";
     }
 }

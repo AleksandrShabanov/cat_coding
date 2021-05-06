@@ -6,6 +6,7 @@ public enum HenType {
     MOLDAVIA("Молдавия"),
     BELARUS("Белоруссия");
 
+
     String countryName;
 
     HenType(String countryName) {
