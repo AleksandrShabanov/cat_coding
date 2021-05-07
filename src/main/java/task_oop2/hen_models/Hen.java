@@ -5,7 +5,7 @@ import task_oop2.HenType;
 public class Hen {
 
     private int countOfEggs;
-    private static HenType henType;
+    private HenType henType;
 
     public int getCountOfEggsPerMonth() {
         return  countOfEggs;
@@ -20,7 +20,7 @@ public class Hen {
         return countOfEggs;
     }
 
-    public static HenType getHenType() {
+    public HenType getHenType() {
         return henType;
     }
 
