@@ -1,11 +1,11 @@
-package task_oop2.hen_models;
+package oop.task_oop2.hen_models;
 
-import task_oop2.HenType;
+import oop.task_oop2.HenType;
 
-public class RussianHen extends Hen {
+public class BelarusianHen extends Hen{
 
-    public RussianHen(HenType henType, int countOfEggs) {
-        super(HenType.RUSSIA, countOfEggs);
+    public BelarusianHen(HenType henType, int countOfEggs) {
+        super(henType, countOfEggs);
     }
 
     @Override
@@ -17,4 +17,5 @@ public class RussianHen extends Hen {
         return super.getDescription() + " Моя страна - " + super.getHenType() + ". Я несу " + getCountOfEggsPerMonth()
                 + " яиц в месяц.";
     }
-}
+
+    }

@@ -1,9 +1,9 @@
-package task_oop;
+package oop.task_oop;
 
-import task_oop.models.Book;
-import task_oop.models.LibraryLog;
-import task_oop.models.RegRecord;
-import task_oop.models.User;
+import oop.task_oop.models.Book;
+import oop.task_oop.models.LibraryLog;
+import oop.task_oop.models.RegRecord;
+import oop.task_oop.models.User;
 
 public class Test {
 

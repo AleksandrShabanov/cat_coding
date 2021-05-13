@@ -1,6 +1,6 @@
-package task_oop2.hen_models;
+package oop.task_oop2.hen_models;
 
-import task_oop2.HenType;
+import oop.task_oop2.HenType;
 
 public class Hen {
 

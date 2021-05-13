@@ -1,10 +1,11 @@
-package task_oop2.hen_models;
+package oop.task_oop2.hen_models;
 
-import task_oop2.HenType;
+import oop.task_oop2.HenType;
 
-public class MoldovanHen extends Hen{
+public class UkrainianHen extends Hen {
+    private int countOfEggs;
 
-    public MoldovanHen(HenType henType, int countOfEggs) {
+    public UkrainianHen(HenType henType, int countOfEggs) {
         super(henType, countOfEggs);
     }
 

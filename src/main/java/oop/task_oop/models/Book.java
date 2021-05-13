@@ -1,4 +1,4 @@
-package task_oop.models;
+package oop.task_oop.models;
 
 public class Book {
 

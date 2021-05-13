@@ -1,6 +1,6 @@
-package task_oop2;
+package oop.task_oop2;
 
-import task_oop2.hen_models.*;
+import oop.task_oop2.hen_models.*;
 
 public class HenFabric {
 

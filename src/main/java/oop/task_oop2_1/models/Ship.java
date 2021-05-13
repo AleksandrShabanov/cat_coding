@@ -1,4 +1,4 @@
-package task_oop2_1.models;
+package oop.task_oop2_1.models;
 
 public class Ship extends Vehicle{
 

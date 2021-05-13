@@ -1,4 +1,4 @@
-package task_oop2;
+package oop.task_oop2;
 
 public enum HenType {
     UKRAINE("Украина"),

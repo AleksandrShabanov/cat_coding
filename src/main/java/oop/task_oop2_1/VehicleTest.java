@@ -1,9 +1,9 @@
-package task_oop2_1;
+package oop.task_oop2_1;
 
-import task_oop2_1.models.Car;
-import task_oop2_1.models.Ship;
-import task_oop2_1.models.Truck;
-import task_oop2_1.models.Vehicle;
+import oop.task_oop2_1.models.Car;
+import oop.task_oop2_1.models.Ship;
+import oop.task_oop2_1.models.Truck;
+import oop.task_oop2_1.models.Vehicle;
 
 public class VehicleTest {
     public static void main(String[] args) {
