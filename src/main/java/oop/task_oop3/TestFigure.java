@@ -5,6 +5,11 @@ import oop.task_oop3.models_figure.Figure;
 import oop.task_oop3.models_figure.Rectangle;
 import oop.task_oop3.models_figure.Triangle;
 
+/**
+ * 1) Сделайте иерархию по геометрическим фигурам(базовый класс фигура)
+ * абстрактные методы вычисления площади/периметра и конкретные классы треугольник, прямоугольник и т.д.
+ */
+
 public class TestFigure {
     public static void main(String[] args) {
         Figure triangle = new Triangle();
