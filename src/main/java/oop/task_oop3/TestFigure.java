@@ -12,17 +12,12 @@ import oop.task_oop3.models_figure.Triangle;
 
 public class TestFigure {
     public static void main(String[] args) {
-        Figure triangle = new Triangle();
-        triangle.setA(20);
-        triangle.setB(20);
-        triangle.setC(10);
+        Figure triangle = new Triangle(20, 20, 10);
 
         System.out.println("Площадь треугольника: " + triangle.getArea());
         System.out.println("Периметр треугольника: " + triangle.getPerimeter());
 
-        Figure rectangle = new Rectangle();
-        rectangle.setA(20);
-        rectangle.setB(10);
+        Figure rectangle = new Rectangle(20, 10);
 
         System.out.println("Площадь прямоугольника: " + rectangle.getArea());
         System.out.println("Периметр прямоугольника : " + rectangle.getPerimeter());

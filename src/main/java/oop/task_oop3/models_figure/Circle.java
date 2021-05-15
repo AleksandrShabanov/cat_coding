@@ -2,7 +2,7 @@ package oop.task_oop3.models_figure;
 
 public class Circle extends Figure{
 
-    double radius;
+    private double radius;
 
     public void setRadius(double radius) {
         this.radius = radius;
