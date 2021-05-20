@@ -1,4 +1,4 @@
-package task_reflection;
+package task_reflection.models;
 
 public class Reflection {
     private String name = "My name is";

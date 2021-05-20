@@ -1,6 +1,6 @@
 package src.main.java.task_reflection;
 
-import task_reflection.Reflection;
+import task_reflection.models.Reflection;
 
 import java.lang.reflect.Field;
 
@@ -18,7 +18,7 @@ import java.lang.reflect.Field;
 
 public class ReflectionTest {
 
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+    public static void main(String[] args) throws IllegalAccessException, NoSuchFieldException {
         Object obj = new Reflection();
         Class aClass = obj.getClass();
 
