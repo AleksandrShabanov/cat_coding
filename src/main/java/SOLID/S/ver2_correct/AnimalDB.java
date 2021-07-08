@@ -7,16 +7,20 @@ import java.util.List;
 
 public class AnimalDB {
     private Animal animal;
+    private  List<Animal> DB_Animals = new ArrayList<>();
 
     public Animal getAnimal() {
         return animal;
     }
 
-    public List<Animal> saveAnimal(Animal animal) {
-        List<Animal> list = new ArrayList<>();
-        list.add(animal);
+    public  List<Animal> getDB_Animals() {
+        return DB_Animals;
+    }
 
-        System.out.println(list);
-        return list;
+    public List<Animal> saveAnimal(Animal animal) {
+        DB_Animals.add(animal);
+
+        System.out.println(DB_Animals);
+        return DB_Animals;
     }
 }
