@@ -5,7 +5,7 @@ import SOLID.O.models.Cat;
 import SOLID.O.models.Dog;
 import SOLID.O.models.Horse;
 
-public class TestAnimalSound {
+public class TestO {
     public static void main(String[] args) {
         Animal[] animals = {new Dog(), new Cat(), new Horse()};
         animalSound(animals);
