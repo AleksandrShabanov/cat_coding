@@ -9,7 +9,7 @@ public class TestL {
     public static void main(String[] args) {
         Animal[] animals = {
                 new Lion(),
-                new Snake(), 
+                new Snake(),
                 new Mouse()
         };
 
