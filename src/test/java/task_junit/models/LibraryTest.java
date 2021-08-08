@@ -1,32 +1,73 @@
 package task_junit.models;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 public class LibraryTest {
-    Library library = new Library();
+    Library library;
+
+    @Before
+    public void init() {
+        this.library = new Library();
+    }
+
     @Test
-    public void getAllUsers() {
+    public void testAddedUsersToLibraryDB_NOT_NULL() {
+        //Given
+        User user = new User("Ivan V", 21, 1);
+//        User user  = null;
+        List<User> actual = new ArrayList<>();
+        actual.add(user);
+
+        // When
+        List<User> expected = new ArrayList<>();
+        expected = library.addedUsersToLibraryDB(expected, user);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testRemoveUsersFromLibraryDB() {
+        //Given
+        User user = new User("Petr P", 21, 3);
+        User user1 = new User("Anna A", 44, 1);
+        List<User> actual = new ArrayList<>();
+        actual.add(user);
+        actual.add(user1);
+        actual.remove(user);
+
+        //When
+        List<User> expected = new ArrayList<>();
+        expected.add(user);
+        expected.add(user1);
+        expected = library.removeUsersFromLibraryDB(expected, user);
+
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetAllUsers() {
         // тестовые данные
         User user = new User("Ivan Petrov", 21, 1);
-        User user1 = new User("Anna Petrova", 13, 2);
-        User user2 = new User("Fedor Ivanov", 45, 3);
 
-        // заполняем список данными из нашаго метода
-        List<User> expected = library.getAllUsers();
 
         // заполняем список actual данными для сравнения
         List<User> actual = new ArrayList<>();
         actual.add(user);
-        actual.add(user1);
-        actual.add(user2);
+        library.setUsers(actual);
+
+        // заполняем список данными из нашаго метода
+        List<User> expected = library.getAllUsers();
 
         // Запуск теста. В случае, если expected и actual не будут равны, тест будет провален
         Assert.assertEquals(expected, actual);
     }
+
+
 }
