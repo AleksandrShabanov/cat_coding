@@ -1,5 +1,7 @@
 package task_junit.models;
 
+import java.util.Objects;
+
 public class User {
 
     private String fullName;
@@ -14,16 +16,21 @@ public class User {
 
     public User() {}
 
-    public String getFullName() {
-        return fullName;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return age == user.age && libraryId == user.libraryId && Objects.equals(fullName, user.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName, age, libraryId);
     }
 
     public int getAge() {
         return age;
-    }
-
-    public int getLibraryId() {
-        return libraryId;
     }
 
     @Override

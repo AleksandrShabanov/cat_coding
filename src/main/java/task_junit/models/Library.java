@@ -30,7 +30,7 @@ public class Library {
     public List<User> removeUsersFromLibraryDB(List<User> users, User user) {
 
         for (User userWeNeed : users) {
-            if (userWeNeed == user) {
+            if (userWeNeed.equals(user)) {
                 users.remove(userWeNeed);
             }
         }

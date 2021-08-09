@@ -37,9 +37,7 @@ public class LibraryTest {
         User user = new User("Petr P", 21, 3);
         User user1 = new User("Anna A", 44, 1);
         List<User> actual = new ArrayList<>();
-        actual.add(user);
         actual.add(user1);
-        actual.remove(user);
 
         //When
         List<User> expected = new ArrayList<>();
@@ -53,19 +51,16 @@ public class LibraryTest {
 
     @Test
     public void testGetAllUsers() {
-        // тестовые данные
+        //Given
         User user = new User("Ivan Petrov", 21, 1);
-
-
-        // заполняем список actual данными для сравнения
         List<User> actual = new ArrayList<>();
         actual.add(user);
         library.setUsers(actual);
 
-        // заполняем список данными из нашаго метода
+        //When
         List<User> expected = library.getAllUsers();
 
-        // Запуск теста. В случае, если expected и actual не будут равны, тест будет провален
+        //Than
         Assert.assertEquals(expected, actual);
     }
 
