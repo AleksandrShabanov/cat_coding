@@ -1,16 +1,17 @@
 package task_junit.models;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class LibraryTest {
     Library library;
 
-    @Before
+    @BeforeEach
     public void init() {
         this.library = new Library();
     }
@@ -28,7 +29,7 @@ public class LibraryTest {
         expected = library.addedUsersToLibraryDB(expected, user);
 
         // Then
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -46,7 +47,7 @@ public class LibraryTest {
         expected = library.removeUsersFromLibraryDB(expected, user);
 
         //Then
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -61,7 +62,7 @@ public class LibraryTest {
         List<User> expected = library.getAllUsers();
 
         //Than
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
 
