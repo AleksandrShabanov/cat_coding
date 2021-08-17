@@ -40,4 +40,14 @@ public class Employee {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", countryOfResidence='" + countryOfResidence + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

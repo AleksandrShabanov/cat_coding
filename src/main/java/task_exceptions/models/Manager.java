@@ -1,8 +1,9 @@
 package task_exceptions.models;
 
-import task_exceptions.exceptions.IncorrectAge;
-import task_exceptions.exceptions.IncorrectCountry;
-import task_exceptions.exceptions.IncorrectFullName;
+import task_exceptions.enums.CountryName;
+import task_exceptions.exceptions.IncorrectAgeException;
+import task_exceptions.exceptions.IncorrectCountryException;
+import task_exceptions.exceptions.IncorrectFullNameException;
 
 import java.util.Scanner;
 
@@ -19,42 +20,44 @@ import java.util.Scanner;
  */
 
 public class Manager {
-
-    Employee newEmployee = new Employee();
     Scanner scanner = new Scanner(System.in);
 
-    public int correctEmployeeAge() {
-        newEmployee.setAge(scanner.nextInt());
+    public void fillCorrectEmployeeAge(Employee employee) {
+        System.out.println("enter employee age: ");
+        int age = scanner.nextInt();
 
-        if (newEmployee.getAge() < 0 || newEmployee.getAge() > 150) {
-            throw new IncorrectAge("Incorrect age: " + newEmployee.getAge());
+        if (age < 0 || age > 150) {
+            throw new IncorrectAgeException("Incorrect age: " + age);
         }
 
-        System.out.print("Employee age: ");
-        return newEmployee.getAge();
+        employee.setAge(age);
     }
 
-    public String correctEmployeeFullName() {
-        newEmployee.setName(scanner.nextLine());
-        newEmployee.setSurname(scanner.nextLine());
+    public void fillCorrectEmployeeFullName(Employee employee) {
+        System.out.println("enter employee name: ");
+        String name = scanner.nextLine();
+        System.out.println("enter employee surname: ");
+        String surname = scanner.nextLine();
 
-        if (newEmployee.getName().length() < 2 || newEmployee.getSurname().length() < 2) {
-            throw new IncorrectFullName("Incorrect FullName: " + newEmployee.getName() + " " + newEmployee.getSurname());
+        if (name.length() < 2 || surname.length() < 2) {
+            throw new IncorrectFullNameException("Incorrect FullName: " + name + " " + surname);
         }
 
-        return "Employee FullName: " + newEmployee.getName() + " " + newEmployee.getSurname();
+        employee.setName(name);
+        employee.setSurname(surname);
     }
 
-    public String correctEmployeeCountry() {
-        newEmployee.setCountryOfResidence(scanner.nextLine());
+    public void fillCorrectEmployeeCountry(Employee employee) {
+        System.out.println("enter country name: ");
+        String countryName = scanner.nextLine();
 
-        if (newEmployee.getCountryOfResidence().equals(Country.RUSSIA.toString()) ||
-                newEmployee.getCountryOfResidence().equals(Country.FRANCE.toString()) ||
-                newEmployee.getCountryOfResidence().equals(Country.ITALY.toString()) ||
-                newEmployee.getCountryOfResidence().equals(Country.SPAIN.toString())) {
-            return "Employee country: " + newEmployee.getCountryOfResidence();
+        if (countryName.equals(CountryName.RUSSIA.toString()) ||
+                countryName.equals(CountryName.FRANCE.toString()) ||
+                countryName.equals(CountryName.ITALY.toString()) ||
+                countryName.equals(CountryName.SPAIN.toString())) {
+            employee.setCountryOfResidence(countryName);
         } else {
-            throw new IncorrectCountry("Incorrect country: " + newEmployee.getCountryOfResidence());
+            throw new IncorrectCountryException("Incorrect country: " + countryName);
         }
     }
 
