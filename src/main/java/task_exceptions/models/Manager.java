@@ -24,7 +24,7 @@ public class Manager {
 
     public void fillCorrectEmployeeAge(Employee employee) {
         System.out.println("enter employee age: ");
-        int age = scanner.nextInt();
+        int age = Integer.valueOf(scanner.nextLine());
 
         if (age < 0 || age > 150) {
             throw new IncorrectAgeException("Incorrect age: " + age);

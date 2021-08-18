@@ -8,9 +8,9 @@ public class ManagerTest {
         Manager manager = new Manager();
         Employee developer = new Employee();
 
+        manager.fillCorrectEmployeeAge(developer);
         manager.fillCorrectEmployeeFullName(developer);
         manager.fillCorrectEmployeeCountry(developer);
-        manager.fillCorrectEmployeeAge(developer);
 
         System.out.println(developer);
     }
