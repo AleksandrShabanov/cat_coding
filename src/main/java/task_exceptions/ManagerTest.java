@@ -12,6 +12,10 @@ public class ManagerTest {
         manager.fillCorrectEmployeeFullName(developer);
         manager.fillCorrectEmployeeCountry(developer);
 
+        manager.fillCorrectEmployeeCountry(developer);
+        manager.fillCorrectEmployeeCountry(developer);
+
+
         System.out.println(developer);
     }
 }
