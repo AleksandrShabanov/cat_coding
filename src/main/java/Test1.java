@@ -1,8 +1,5 @@
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.*;
 
-import static java.lang.Math.round;
 
 public class Test1 {
     public static void main(String[] args) {
@@ -12,7 +9,39 @@ public class Test1 {
             arr[i] = (int) Math.round(Math.random() * 10);
         }
         System.out.println(Arrays.toString(arr));
-        searchElement(arr, 10);
+        sortArray(arr);
+        sortArray2(arr);
+
+    }
+
+    public static void sortArray(int[] arr) {
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void sortArray2(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void searchElement(int[] arr, int element) {
