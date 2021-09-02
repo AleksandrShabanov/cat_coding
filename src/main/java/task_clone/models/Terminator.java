@@ -1,5 +1,7 @@
 package task_clone.models;
 
+import java.util.Objects;
+
 /**
  *  1) на свое усмотрение(прояви творчество) - напиши программу с демонстрацией поверхностного клонирования
  */
@@ -52,6 +54,19 @@ public class Terminator implements Cloneable {
 
         return clone;
     }
+
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Terminator that = (Terminator) o;
+//        return yearOfIssue == that.yearOfIssue && Objects.equals(modelName, that.modelName) && Objects.equals(skyNet, that.skyNet);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(modelName, yearOfIssue, skyNet);
+//    }
 
     @Override
     public String toString() {
